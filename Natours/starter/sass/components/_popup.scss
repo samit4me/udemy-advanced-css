@@ -10,6 +10,11 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -49,7 +54,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
-	transition: all 0.4s 0.2s;
+    transition: all 0.4s 0.2s;
   }
 
   &__left {
